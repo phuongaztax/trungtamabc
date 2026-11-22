@@ -18,7 +18,9 @@ Hướng dẫn cho Claude Code khi làm việc trong dự án này.
 - **Backend:** Không có server riêng. Firebase Auth (Email/Password) + Firestore; bảo mật bằng `firestore.rules`
 - **Package manager:** npm
 - **Database:** Cloud Firestore – project `buoi4-blog-thongbao` (xem [docs/firebase.md](docs/firebase.md))
-- **Hosting / Deploy:** TODO
+- **Hosting / Deploy:** Vercel – project `trungtamabc`, https://trungtamabc.vercel.app.
+  Nối với GitHub `phuongaztax/trungtamabc`: push lên `main` → tự deploy production.
+  Biến môi trường `NEXT_PUBLIC_FIREBASE_*` đã khai báo trên Vercel (Production/Preview/Development).
 
 > ⚠️ Mọi lệnh `firebase` thay đổi cấu hình phải chỉ rõ `--project buoi4-blog-thongbao`.
 > Không đụng tới project `buoi4-75f8b`.
