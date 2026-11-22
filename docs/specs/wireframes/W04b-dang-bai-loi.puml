@@ -1,0 +1,23 @@
+@startsalt W04b-dang-bai-loi
+title W04b – Đăng thông báo: bỏ trống tiêu đề · UC04 luồng 4a (AC2)
+{+
+  {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng bài | Xin chào, phutrach01 | Đăng xuất }
+  ==
+  <size:16><b>Đăng thông báo mới</b></size>
+  .
+  Tiêu đề <color:red>*</color>
+  {+ "                                                       " }
+  <color:red>⚠ Vui lòng nhập tiêu đề</color>
+  .
+  Nội dung <color:red>*</color>
+  {+
+    "Trung tâm thông báo khai giảng lớp Tiếng Anh B1:      "
+    "- Ngày khai giảng: 01/12/2026                          "
+    "- Lịch học: 18h00–20h00, thứ 2-4-6                     "
+    .
+  }
+  <color:gray><i>↑ Nội dung đã nhập được giữ nguyên</i></color>
+  .
+  { [  Đăng  ] | [ Hủy ] }
+}
+@endsalt

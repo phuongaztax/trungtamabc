@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Claude Code (cấu hình cá nhân, không commit)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+
+# Firebase
+firebase-debug.log
+firestore-debug.log
+.firebase/
+
+# Next.js
+.next/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+*.pem
+
+!.env.example

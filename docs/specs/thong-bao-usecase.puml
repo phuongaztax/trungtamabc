@@ -1,0 +1,47 @@
+@startuml thong-bao-usecase
+title Use Case – Đăng & xem thông báo khai giảng
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Khách / Học viên" as Guest
+actor "Người phụ trách" as Admin
+Guest <|-- Admin
+
+rectangle "Website trung tâm" {
+  usecase "UC01\nXem danh sách thông báo" as UC01
+  usecase "UC02\nXem chi tiết thông báo\n(mở qua link)" as UC02
+  usecase "UC03\nĐăng nhập" as UC03
+  usecase "UC04\nĐăng thông báo" as UC04
+  usecase "UC05\nSao chép link thông báo" as UC05
+  usecase "Kiểm tra quyền đăng bài" as CheckRole
+  usecase "Kiểm tra tiêu đề & nội dung" as Validate
+  usecase "Báo lỗi trường bỏ trống\n(giữ lại dữ liệu đã nhập)" as ShowError
+  usecase "UC06\nĐăng xuất" as UC06
+}
+
+Guest --> UC01
+Guest --> UC02
+
+Admin --> UC03
+Admin --> UC04
+Admin --> UC05
+Admin --> UC06
+
+UC04 ..> CheckRole : <<include>>
+UC04 ..> Validate  : <<include>>
+ShowError ..> Validate : <<extend>>\n[tiêu đề hoặc\nnội dung trống]
+UC05 ..> UC02 : <<extend>>
+
+note right of CheckRole
+  Tiền điều kiện: đã đăng nhập (UC03).
+  Chỉ tài khoản được cấp quyền
+  mới đăng được bài.
+end note
+
+note bottom of UC01
+  Bài mới nhất ở đầu danh sách.
+  Dữ liệu được lưu bền vững
+  (tải lại trang vẫn thấy).
+end note
+@enduml

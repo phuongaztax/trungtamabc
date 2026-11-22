@@ -1,0 +1,41 @@
+rules_version = '2';
+
+// Project: buoi4-blog-thongbao
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Tài khoản được cấp quyền = có document admins/{uid}.
+    // Chỉ tạo/xóa qua Firebase Console (client không ghi được).
+    function isAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function nonEmptyString(value, max) {
+      return value is string && value.trim().size() > 0 && value.size() <= max;
+    }
+
+    match /announcements/{id} {
+      // AC4: khách đọc được thông báo
+      allow read: if true;
+
+      // AC4: chỉ tài khoản được cấp quyền mới đăng được
+      // AC2: tiêu đề và nội dung bắt buộc (kiểm tra lại phía server)
+      allow create: if isAdmin()
+        && request.resource.data.keys().hasOnly(['title', 'content', 'authorUid', 'createdAt'])
+        && nonEmptyString(request.resource.data.title, 200)
+        && nonEmptyString(request.resource.data.content, 20000)
+        && request.resource.data.authorUid == request.auth.uid
+        && request.resource.data.createdAt == request.time;
+
+      // Chưa có trong phạm vi: sửa / xóa
+      allow update, delete: if false;
+    }
+
+    match /admins/{uid} {
+      // Người dùng chỉ được kiểm tra quyền của chính mình
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+  }
+}

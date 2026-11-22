@@ -1,0 +1,22 @@
+@startsalt W03-dang-nhap
+title W03 – Đăng nhập (trạng thái lỗi) · UC03
+{+
+  {* <b>TRUNG TÂM ABC</b> | Thông báo }
+  ==
+  .
+  {
+    . | <size:16><b>Đăng nhập quản trị</b></size> | .
+    . | . | .
+    . | {+ <color:red>⚠ Tên đăng nhập hoặc mật khẩu không đúng</color> } | .
+    . | . | .
+    . | Tên đăng nhập | .
+    . | "phutrach01             " | .
+    . | Mật khẩu | .
+    . | "                       " | .
+    . | <color:gray><i>(ô mật khẩu được xóa sau khi sai)</i></color> | .
+    . | . | .
+    . | [      Đăng nhập      ] | .
+  }
+  .
+}
+@endsalt

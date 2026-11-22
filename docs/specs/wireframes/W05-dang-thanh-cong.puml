@@ -1,0 +1,22 @@
+@startsalt W05-dang-thanh-cong
+title W05 – Sau khi đăng thành công · UC04 bước 6 + UC05
+{+
+  {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng bài | Xin chào, phutrach01 | Đăng xuất }
+  ==
+  {+
+    <color:green><b>✔ Đã đăng thông báo</b></color>
+    Gửi link này cho học viên:
+    { "https://trungtam.vn/thong-bao/khai-giang-b1    " | [ Sao chép link ] }
+    <color:gray><i>Bấm → "Đã sao chép"</i></color>
+  }
+  .
+  <color:blue><u>← Danh sách thông báo</u></color>
+  .
+  <size:18><b>Khai giảng lớp Tiếng Anh B1 – 01/12</b></size>
+  <color:gray>Đăng ngày 22/11/2026 · 15:04</color>
+  --
+  Trung tâm thông báo khai giảng lớp Tiếng Anh B1:
+  - Ngày khai giảng: 01/12/2026
+  - Lịch học: 18h00–20h00, thứ 2-4-6
+}
+@endsalt

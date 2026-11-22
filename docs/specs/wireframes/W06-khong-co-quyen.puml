@@ -1,0 +1,24 @@
+@startsalt W06-khong-co-quyen
+title W06 – Trang lỗi: không có quyền (403) / không tìm thấy (404)
+{
+  {+
+    {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng xuất }
+    ==
+    .
+    <size:16><b>403 – Bạn không có quyền đăng bài</b></size>
+    Liên hệ quản trị viên để được cấp quyền.
+    .
+    <color:blue><u>← Về danh sách thông báo</u></color>
+    .
+  } | . | {+
+    {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng nhập }
+    ==
+    .
+    <size:16><b>404 – Không tìm thấy thông báo</b></size>
+    Link có thể sai hoặc thông báo không còn.
+    .
+    <color:blue><u>← Về danh sách thông báo</u></color>
+    .
+  }
+}
+@endsalt

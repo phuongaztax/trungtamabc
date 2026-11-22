@@ -1,0 +1,29 @@
+@startsalt W01-danh-sach
+title W01 – Danh sách thông báo (Khách) · UC01
+{+
+  {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng nhập }
+  ==
+  <size:16><b>Thông báo</b></size>
+  .
+  {+
+    <b>Khai giảng lớp Tiếng Anh B1 – 01/12</b>  | <i>NEW</i>
+    <color:gray>22/11/2026 · 15:04</color> | .
+    Lớp học tối thứ 2-4-6, đăng ký trước 28/11… | .
+    <color:blue><u>Xem chi tiết →</u></color> | .
+  }
+  {+
+    <b>Khai giảng lớp Tin học văn phòng – 15/11</b>
+    <color:gray>05/11/2026 · 09:30</color>
+    Lớp học sáng thứ 7, CN…
+    <color:blue><u>Xem chi tiết →</u></color>
+  }
+  {+
+    <b>Lịch nghỉ lễ 20/11</b>
+    <color:gray>15/11/2026 · 08:00</color>
+    Trung tâm nghỉ ngày 20/11…
+    <color:blue><u>Xem chi tiết →</u></color>
+  }
+  .
+  <color:gray><i>↑ Mới nhất ở đầu · Khi chưa có bài: "Chưa có thông báo"</i></color>
+}
+@endsalt

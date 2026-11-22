@@ -1,0 +1,22 @@
+@startsalt W04-dang-bai
+title W04 – Đăng thông báo (form trống) · UC04
+{+
+  {* <b>TRUNG TÂM ABC</b> | Thông báo | Đăng bài | Xin chào, phutrach01 | Đăng xuất }
+  ==
+  <size:16><b>Đăng thông báo mới</b></size>
+  .
+  Tiêu đề <color:red>*</color>
+  "                                                         "
+  .
+  Nội dung <color:red>*</color>
+  {+
+    "                                                       "
+    .
+    .
+    .
+    .
+  }
+  .
+  { [  Đăng  ] | [ Hủy ] }
+}
+@endsalt
